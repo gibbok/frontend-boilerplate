@@ -9,10 +9,10 @@ module.exports = {
   },
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '.+support\\.test\\.ts', '/dist/'],
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
+  testPathIgnorePatterns: [`/.cache/`, `/dist/`, `.+support.test.ts`, `/cypress/`],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.{stories.tsx}', '!**/*.d.ts'],
   coverageThreshold: {
     global: {
       statements: 97,

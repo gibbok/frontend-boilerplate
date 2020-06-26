@@ -17,7 +17,7 @@
     "test:visual:approve": "loki approve",
     "test:visual": "loki test --port 6006",
     "test:watch": "tsc && jest --watch --coverage false",
-    "test": "tsc && jest --coverage true",
+    "test": "tsc && jest",
     "tsc:watch": "tsc --watch --pretty",
     "tsc": "tsc",
     "cy:open": "cypress open",

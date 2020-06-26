@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> should render 1`] = `
-<div
-  className="sc-AxjAm imJXcT"
+<h1
+  className="sc-AxjAm hJKkph"
 >
-  Hello world!😎
-</div>
+  Hello world! 😎
+</h1>
 `;
