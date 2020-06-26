@@ -20,7 +20,7 @@ install:
   - npm ci
 script:
   - npm run check
-  - npm run game:build:prod
+  - npm run project:build:prod
   - npm run loki:ci
   - npm run cy:verify
   - npm run cy:ci
