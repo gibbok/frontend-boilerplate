@@ -1,9 +1,9 @@
 describe('hello', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:6006/iframe.html?id=app--base');
+    cy.visit('http://localhost:8080');
   });
 
   it('should render Hello', () => {
-    cy.get('#root > h1').contains('Hello world! 😎');
+    cy.get('#app > h1').contains('Hello world! 😎');
   });
 });

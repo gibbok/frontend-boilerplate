@@ -20,7 +20,7 @@ install:
   - npm ci
 script:
   - npm run check
-  - npm run project:build:prod
+  - npm run build
   - npm run loki:ci
   - npm run cy:verify
   - npm run cy:ci
