@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "scripts": {
-    "clean": "shx rm -rf build && shx rm -rf dist && shx rm -rf .cache && shx rm -rf .out",
+    "clean": "shx rm -rf build && shx rm -rf dist && shx rm -rf .cache && shx rm -rf .out && shx rm -rf coverage",
     "check": "npm run tsc && npm run lint && npm run test",
     "deploy": "gh-pages -d build",
     "build-deploy": "npm run check && npm run storybook:build && npm run game:build:prod && npm run deploy",
