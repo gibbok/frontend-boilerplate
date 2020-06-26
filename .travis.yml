@@ -1,5 +1,5 @@
 env:
-  - CYPRESS_BASE_URL=http://127.0.0.1:8081
+  - CYPRESS_BASE_URL="http://127.0.0.1:8081"
 language: node_js
   - 12.18.0
 node_js:
