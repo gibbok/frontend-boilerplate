@@ -1,6 +1,7 @@
-import renderer from 'react-test-renderer';
-import GlobalStyle from './GlobalStyle';
 import React from 'react';
+import renderer from 'react-test-renderer';
+
+import GlobalStyle from './GlobalStyle';
 
 describe('GlobalStyle', () => {
   it('renders properly', () => {

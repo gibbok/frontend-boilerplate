@@ -1,6 +1,7 @@
 import * as React from 'react';
-import GlobalStyle from './utils/GlobalStyle';
+
 import { Hello } from './Hello';
+import GlobalStyle from './utils/GlobalStyle';
 
 export function App(): JSX.Element {
   return (
