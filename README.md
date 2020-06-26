@@ -1,60 +1,64 @@
 # frontend-boilerplate
 
-This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React and Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel and Travis and contains state of art testing and developement tools such Cypress, React Test Renderer, StoryBook and Loki.
+This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React with Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel and Travis and contains state of art testing and developement tools such Cypress, React Test Renderer, StoryBook and Loki.
+
 Kick-start your project with this boilerplate is super easy and will help you to stay productive.
 
-## Features
+## 😍 Features
 
-- A live-reloading server (HMR)
-- Automated build process that includes, but is not limited to TypeScript and JavaScript transpiling, CSS and image/svg optimization
-- Linting with ESLint and Prettier
-- Sourcemaps
-- Integration with End to End UI testing and with Continuous integration (CI)
+Your environment will have everything you need to build and test a modern single-page React application:
+
+- A live-reloading server (HMR) that warns about common mistakes
+- Language extras beyond ES6 like the object spread operator
+- A build script to bundle JS, CSS, and optimize images and SVG for production, with hashes and sourcemaps
+- Autoprefixed CSS, so you don’t need -webkit- or other prefixes plus a useful CSS normalizer
+- Proper linting with ESLint and Prettier
+- A fast interactive unit test runner with built-in support for coverage reporting
+- Flowless integration with End to End UI testing and with Continuous integration (CI)
 - Visual regression testing
 - Support for Component Driven Development (CDD)
 
-## Quickstart
+## 🚀 Quickstart
 
 1. Clone this repo
 1. Run `npm install`
 1. Code you project and see it live using `npm start`
-1. Code your React component in isolation `npm run storybook`
+1. Code your React components in isolation with `npm run storybook`
 1. Lint and test with `npm run lint` and `npm test`
 1. Build for production by running `npm run build`
 1. Deploy with a single command to GitHub Pages using `npm run deploy`
 
-## Getting started
+## 🌟 Getting started
 
 ### Set up your development environment
 
 1. Make sure you have NodeJS installed in your machine. For detailed instructions, see [Installing Node](https://nodejs.org/en/download/package-manager/):
 
-1. Clone the project to your computer using:
+2. Clone the project to your computer using:
 
 ```shell
 git clone https://github.com/gibbok/frontend-boilerplate.git
 ```
 
-1. Navigate to your new folder and run this command to install the project-specific dependencies:
+3. Navigate to your new folder and run this command to install the project-specific dependencies:
 
 ```shell
 npm install
 ```
 
-1. Done! You can now start your development server by running npm run dev. This command will start a local server, located at `http://localhost:8080`.
+4. Done! You can now start your development server by running `npm start`. This command will start a local server, located at `http://localhost:8080`.
 
 ### Creating components
 
-React Components, tests and StoryBook stories can be located anywhere in the `src` folder, please use:
-`.tsx` for React with JSX
-`.stories.tsx` for stories
+React Components, their tests and StoryBook stories can be located anywhere in the `src` folder, please use . `.tsx` for React with JSX and `.stories.tsx` for stories.
 
+By the default your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
 
 ### Linting
 
 The `npm run lint` lint script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly formats the code.
 
-If you use Visual Studio Code IDE on file save, the code will be automatically formatted, but you need to install [ESLInt](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension, using:
+If you use Visual Studio Code IDE on file save, your source code will be automatically formatted, but you need to have installed [ESLInt](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension, using:
 
 ```shell
 code --install-extension dbaeumer.vscode-eslint
@@ -64,27 +68,44 @@ code --install-extension dbaeumer.vscode-eslint
 
 Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest.
 File for test support as `.support.test.ts` will be escluded from Jest test coverage.
-Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to conituoisly watch your test when coding.
+Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to conituoisly watch your tests when coding.
 
-Visual regression can be runed using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
+Visual regression can be runned using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
 
-End to End testing using Cypress can be executed using locally running `npm run cy:open", this project automatically perform headless E2E testing on CI using Travis.
+End to End testing using Cypress can be executed locally running `npm run cy:open`, this project automatically perform headless E2E testing on CI using Travis.
+
+Suggested extension [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
+
+```shell
+code --install-extension firsttris.vscode-jest-runner
+```
 
 #### Building
 
-Running `npm run build` will compile and build in your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server by running.
+Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server.
 
-Running `npm run build-deploy` will compile and build your code and publish on
-GitHub Pages automatically, the project will be visible for example at:
+Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visible, for example at:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/
 --------^ your user name -------^ your repository name
 ```
 
-If you want to deploy also StoryBook together with your application you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be placed at `/storybook`, for instance:
+If you want to deploy also StoryBook together with your application you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be sitauted at `/storybook`, for instance:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/project/
 https://gibbok.github.io/frontend-boilerplate/storybook/
 ```
+
+#### Tooling
+
+If you need to clean `build` and related folder use `npm run clean`.
+
+To code how many source lines of code your project has run `npm run sloc`.
+
+To check unused `npm packages` use `npm run dep`.
+
+## License
+
+frontend-boilerplate is open source software [licensed as MIT](./LICENSE).
