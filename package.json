@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d build",
     "cy:ci": "npm run cy:verify && start-server-and-test build:start 8081 cy:run",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --headless --browser chrome",
+    "cy:run": "CYPRESS_BASE_URL=http://127.0.0.1:8081 cypress run --headless --browser chrome",
     "lint:fix": "tsc & eslint './src/**/*.{js,ts,tsx}' --fix & prettier './src/**/*.{js,ts,tsx}' --write",
     "lint": "tsc & eslint './src/**/*.{js,ts,tsx}' & prettier './src/**/*.{js,ts,tsx}' --check",
     "loki:ci": "loki --requireReference --reactUri file:./build/storybook",
