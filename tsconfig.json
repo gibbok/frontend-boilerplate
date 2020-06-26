@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2019",
+    "allowJs": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "noErrorTruncation": true,
+    "types": [
+      "react",
+      "jest"
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ]
+}
