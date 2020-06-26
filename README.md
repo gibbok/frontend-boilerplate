@@ -52,7 +52,9 @@ npm install
 
 React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
-Styled Components are pre-installed by default. Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standard.
+Styled Components are pre-installed by default and it has been setted to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
+
+Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standard.
 
 ### Linting
 
