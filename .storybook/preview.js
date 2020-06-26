@@ -6,7 +6,7 @@ addParameters({
   options: {
     theme: create({
       base: 'light',
-      brandTitle: 'Blocchi puzzle',
+      brandTitle:''
     }),
   },
 })
