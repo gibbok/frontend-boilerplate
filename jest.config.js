@@ -10,7 +10,7 @@ module.exports = {
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   preset: 'ts-jest',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
-  testPathIgnorePatterns: [`/.cache/`, `/dist/`, `.+support.test.ts`, `/cypress/`],
+  testPathIgnorePatterns: [`.cache`, `dist`, `.+support.test.ts`, `cypress`],
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.{stories.tsx}', '!**/*.d.ts'],
   coverageThreshold: {
