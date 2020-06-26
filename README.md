@@ -1,6 +1,6 @@
 # frontend-boilerplate
 
-This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React with Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel and Travis and contains state of art testing and developement tools such Cypress, React Test Renderer, StoryBook and Loki.
+This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React with Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel, and Travis and contains state-of-art testing and development tools such Cypress, React Test Renderer, StoryBook, and Loki.
 
 Kick-start your project with this boilerplate is super easy and will help you to stay productive.
 
@@ -22,8 +22,8 @@ Your environment will have everything you need to build and test a modern single
 
 1. Clone this repo
 1. Run `npm install`
-1. Code you project and see it live using `npm start`
-1. Code your React components in isolation with `npm run storybook`
+1. Code your project and see it live using `npm start`
+1. Work on your React components in isolation with `npm run storybook`
 1. Lint and test with `npm run lint` and `npm test`
 1. Build for production by running `npm run build`
 1. Deploy with a single command to GitHub Pages using `npm run deploy`
@@ -50,9 +50,9 @@ npm install
 
 ### Creating components
 
-React Components, their tests and StoryBook stories can be located anywhere in the `src` folder, please use . `.tsx` for React with JSX and `.stories.tsx` for stories.
+React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
-By the default your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
+Styled Components are pre-installed by default. Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standard.
 
 ### Linting
 
@@ -66,11 +66,11 @@ code --install-extension dbaeumer.vscode-eslint
 
 ### Testing
 
-Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest.
-File for test support as `.support.test.ts` will be escluded from Jest test coverage.
-Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to conituoisly watch your tests when coding.
+Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
 
-Visual regression can be runned using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
+Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
+
+Visual regression can be run using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
 
 End to End testing using Cypress can be executed locally running `npm run cy:open`, this project automatically perform headless E2E testing on CI using Travis.
 
@@ -84,14 +84,14 @@ code --install-extension firsttris.vscode-jest-runner
 
 Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server.
 
-Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visible, for example at:
+Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visibleon GitHub, for example at:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/
---------^ your user name -------^ your repository name
+--------^^ your user ------ ^^ your repository
 ```
 
-If you want to deploy also StoryBook together with your application you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be sitauted at `/storybook`, for instance:
+If you want to deploy also StoryBook together with your application on GitHub Pages you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be situated in folder `/storybook`, for instance:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/project/
@@ -100,11 +100,11 @@ https://gibbok.github.io/frontend-boilerplate/storybook/
 
 #### Tooling
 
-If you need to clean `build` and related folder use `npm run clean`.
+You can use `npm run clean` to wipe out the cache and start from a fresh slate.
 
-To code how many source lines of code your project has run `npm run sloc`.
+You can see how many source lines of code your project includes by using `npm run sloc`.
 
-To check unused `npm packages` use `npm run dep`.
+You can clean up your project by checking unused npm packages with `npm run dep`.
 
 ## License
 
