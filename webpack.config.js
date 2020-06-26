@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
-    publicPath: '/',
+    // publicPath: '/',
   },
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
@@ -39,6 +39,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({

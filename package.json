@@ -18,7 +18,7 @@
     "loki:ci": "loki --requireReference --reactUri file:./build/storybook",
     "sloc": "sloc ./ --exclude 'node_modules|dist|.out|build|.loki|assets|coverage|/.(storyshot)'",
     "start": "webpack-dev-server --mode development --open --hot",
-    "storybook:build:start": "http-server -p 8080 build/storybook",
+    "storybook:build:start": "http-server -p 6007 build/storybook",
     "storybook:build": "build-storybook -c .storybook -o build/storybook",
     "storybook": "start-storybook -p 6006",
     "test:visual:approve": "loki approve",
