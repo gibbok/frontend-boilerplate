@@ -48,11 +48,9 @@ npm install
 React Components, tests and StoryBook stories can be located anywhere in the `src` folder, please use:
 `.tsx` for React with JSX
 `.stories.tsx` for stories
-`.test.ts` or `.test.tsx` for tests
 
-File for test support as `.support.test.ts` will be escluded from Jest test coverage.
 
-### Linting and testing
+### Linting
 
 The `npm run lint` lint script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly formats the code.
 
@@ -60,4 +58,33 @@ If you use Visual Studio Code IDE on file save, the code will be automatically f
 
 ```shell
 code --install-extension dbaeumer.vscode-eslint
+```
+
+### Testing
+
+Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest.
+File for test support as `.support.test.ts` will be escluded from Jest test coverage.
+Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to conituoisly watch your test when coding.
+
+Visual regression can be runed using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
+
+End to End testing using Cypress can be executed using locally running `npm run cy:open", this project automatically perform headless E2E testing on CI using Travis.
+
+#### Building
+
+Running `npm run build` will compile and build in your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server by running.
+
+Running `npm run build-deploy` will compile and build your code and publish on
+GitHub Pages automatically, the project will be visible for example at:
+
+```shell
+https://gibbok.github.io/frontend-boilerplate/
+--------^ your user name -------^ your repository name
+```
+
+If you want to deploy also StoryBook together with your application you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be placed at `/storybook`, for instance:
+
+```shell
+https://gibbok.github.io/frontend-boilerplate/project/
+https://gibbok.github.io/frontend-boilerplate/storybook/
 ```
