@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "keywords": [],
   "scripts": {
     "clean": "shx rm -rf build && shx rm -rf dist && shx rm -rf .cache && shx rm -rf .out",
     "check": "npm run tsc && npm run lint && npm run test",
@@ -25,12 +24,12 @@
     "cy:run": "CYPRESS_BASE_URL=http://127.0.0.1:8080 cypress run --headless --browser chrome",
     "cy:ci": "start-server-and-test start:build:local 8080 cy:run",
     "cy:verify": "cypress verify",
-    "loki:ci": "npm run storybook:build && loki --requireReference --reactUri file:./build/storybook"
+    "loki:ci": "npm run storybook:build && loki --requireReference --reactUri file:./build/storybook",
+    "dep": "depcheck"
   },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7"
   },
@@ -39,9 +38,9 @@
     "@babel/preset-env": "^7.10.0",
     "@babel/preset-react": "^7.10.0",
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
+    "@cypress/webpack-preprocessor": "^5.4.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/react": "^5.3.19",
-    "@storybook/storybook-deployer": "^2.8.6",
     "@storybook/theming": "^5.3.19",
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
@@ -70,7 +69,6 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
-    "redux-mock-store": "^1.5.4",
     "shx": "^0.3.2",
     "start-server-and-test": "^1.11.0",
     "ts-jest": "^26.0.0",
