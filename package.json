@@ -34,9 +34,10 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.0",
+    "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.0",
     "@babel/preset-react": "^7.10.0",
+    "@babel/preset-typescript": "^7.10.1",
     "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@cypress/webpack-preprocessor": "^5.4.1",
     "@storybook/addon-actions": "^5.3.19",
