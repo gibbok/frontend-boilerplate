@@ -72,7 +72,7 @@ Unit tests are done with Jest. TypeScipts files in the component `src` folder en
 
 Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
 
-Visual regression with Loki can be run using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`. Loki configurations can be found in pacakge.json file.
+Visual regression with Loki can be run using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`. Loki configurations can be found in loki.config.js file.
 
 End to End testing using Cypress can be executed locally running `npm run cy:open`, this project automatically perform headless E2E testing on CI using Travis.
 
