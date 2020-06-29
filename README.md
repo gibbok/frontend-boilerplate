@@ -72,7 +72,7 @@ Unit tests are done with Jest. TypeScipts files in the `src` folder ending with 
 
 Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
 
-Visual regression with Loki can be run using `npm run test:visual`, when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
+Visual regression with Loki can be run using `npm run test:visual` (after StoryBook is running `npm run storybook`), when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
 
 End to End testing using Cypress can be executed locally running `npm run cy:open`, this project also automatically perform headless E2E testing on CI using Travis.
 
@@ -84,7 +84,7 @@ code --install-extension firsttris.vscode-jest-runner
 
 #### Building
 
-Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server.
+Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. The `build` folder will contain two subfolders, `project` for your application and `storybook` for your stories. Both folders can then be uploaded to your server.
 
 Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visible on GitHub, for example at:
 
@@ -107,6 +107,40 @@ You can use `npm run clean` to wipe out the cache and start from a fresh slate.
 You can see how many source lines of code your project includes by using `npm run sloc`.
 
 You can clean up your project by checking unused npm packages with `npm run dep`.
+
+#### Npm package script details
+
+List of all npm scripts in the project, use them appending `npm run` before each command.
+
+|                       |                                                                                                                   |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------|
+| build-deploy          | Execute `npm run check` plug it builds for production and deploys `build` folder to GitHub Pages                  |
+| build-deploy:all      | As `build-deploy` but it deploys your application and StoryBook to respectively `project` and `storybook` folders |
+| build:start           | Run on a test server the content of the `build` folder for testing                                                |
+| build                 | Build the project                                                                                                 |
+| check                 | Validate source code using TypeScript, ESLint, and Jest                                                           |
+| clean                 | Wipe out the cache and start from a fresh slate                                                                   |
+| cy:verify             | Verify that Cypress is installed correctly and is executable                                                      |
+| dep                   | Identify not used dependencies                                                                                    |
+| deploy                | Deploy `project` folder to GitHub Pages                                                                           |
+| deploy:all            | As `deploy` but also publish `storybook` folder                                                                   |
+| cy:ci                 | On Travis CI, it verifies Cypress installation, start a server and run `cy:run` Cypress                           |
+| cy:open               | Runs  Cypress Test Runner locally                                                                                 |
+| cy:run                | Runs End to End testing using Cypress headless on Travis CI                                                       |
+| lint:fix              | Safelly auto-fix ESLint and Prettier formatting issues when possible                                              |
+| lint                  | Validate ESLint and Prettier rules for the code base                                                              |
+| loki:ci               | Runs Visual Regression testing on CI                                                                              |
+| sloc                  | Count source lines of code                                                                                        |
+| start                 | Runs a live-reloading server . with HMR for development                                                           |
+| storybook:build:start | Runs built version of StoryBook on a local server for testing                                                     |
+| storybook:build       | Builds StoryBook locally                                                                                          |
+| storybook             | Runs StoryBook locally for development                                                                            |
+| test:visual:approve   | Save visual changes ad reference for Visual Regression                                                            |
+| test:visual           | Runs Visual Regression testing, StoryBook must be running to work                                                 |
+| test:watch            | Runs Jest tests in watch mode                                                                                     |
+| test                  | Runs Jest tests once                                                                                              |
+| tsc:watch             | Runs TypeScript validation in watch mode                                                                          |
+| tsc                   | Runs TypeScript validation                                                                                        |
 
 ## License
 
