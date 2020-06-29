@@ -10,7 +10,7 @@ Your environment will have everything you need to build and test a modern single
 
 - A live-reloading server (HMR) that warns about common mistakes
 - Language extras beyond ES6 like the object spread operator
-- A build script to bundle JS, CSS, and optimize images and SVG for production, with hashes and sourcemaps
+- A build script to bundle and optimize JS and CSS
 - Autoprefixed CSS, so you don’t need -webkit- or other prefixes plus a useful CSS normalizer
 - Proper linting with ESLint and Prettier
 - A fast interactive unit test runner with built-in support for coverage reporting
@@ -52,15 +52,15 @@ npm install
 
 React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
-Styled Components are pre-installed by default and it has been setted to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
+Styled Components is pre-installed by default and it has been set to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
 
-Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standard.
+Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
 
 ### Linting
 
-The `npm run lint` lint script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly formats the code.
+The `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly format the code using EsLint and Prettier rules.
 
-If you use Visual Studio Code IDE on file save, your source code will be automatically formatted, but you need to have installed [ESLInt](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension, using:
+If you use Visual Studio Code IDE on file save, your source code will be automatically formatted if you have installed [ESLInt](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension. Type the following command in your terminal to install it:
 
 ```shell
 code --install-extension dbaeumer.vscode-eslint
@@ -68,15 +68,15 @@ code --install-extension dbaeumer.vscode-eslint
 
 ### Testing
 
-Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
+Unit tests are done with Jest. TypeScipts files in the `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
 
 Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
 
-Visual regression with Loki can be run using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`. Loki configurations can be found in loki.config.js file.
+Visual regression with Loki can be run using `npm run test:visual`, when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
 
-End to End testing using Cypress can be executed locally running `npm run cy:open`, this project automatically perform headless E2E testing on CI using Travis.
+End to End testing using Cypress can be executed locally running `npm run cy:open`, this project also automatically perform headless E2E testing on CI using Travis.
 
-Suggested extension [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
+Suggested extension super useful when writing tests:  [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
 
 ```shell
 code --install-extension firsttris.vscode-jest-runner
@@ -86,7 +86,7 @@ code --install-extension firsttris.vscode-jest-runner
 
 Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server.
 
-Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visibleon GitHub, for example at:
+Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visible on GitHub, for example at:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/
