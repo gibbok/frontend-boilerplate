@@ -111,3 +111,5 @@ You can clean up your project by checking unused npm packages with `npm run dep`
 ## License
 
 frontend-boilerplate is open source software [licensed as MIT](./LICENSE).
+
+Please consider supporting this project by adding a link to it.
