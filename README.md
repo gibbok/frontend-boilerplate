@@ -114,9 +114,9 @@ List of all npm scripts in the project, use them appending `npm run` before each
 
 |                       |                                                                                                                   |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------|
-| build-deploy          | Execute `npm run check` plug it builds for production and deploys `build` folder to GitHub Pages                  |
+| build-deploy          | Executes `npm run check`, builds for production and deploys `build` folder to GitHub Pages                        |
 | build-deploy:all      | As `build-deploy` but it deploys your application and StoryBook to respectively `project` and `storybook` folders |
-| build:start           | Run on a test server the content of the `build` folder for testing                                                |
+| build:start           | Runs on a test server the content of the `build` folder                                                           |
 | build                 | Build the project                                                                                                 |
 | check                 | Validate source code using TypeScript, ESLint, and Jest                                                           |
 | clean                 | Wipe out the cache and start from a fresh slate                                                                   |
@@ -124,14 +124,14 @@ List of all npm scripts in the project, use them appending `npm run` before each
 | dep                   | Identify not used dependencies                                                                                    |
 | deploy                | Deploy `project` folder to GitHub Pages                                                                           |
 | deploy:all            | As `deploy` but also publish `storybook` folder                                                                   |
-| cy:ci                 | On Travis CI, it verifies Cypress installation, start a server and run `cy:run` Cypress                           |
-| cy:open               | Runs  Cypress Test Runner locally                                                                                 |
-| cy:run                | Runs End to End testing using Cypress headless on Travis CI                                                       |
-| lint:fix              | Safelly auto-fix ESLint and Prettier formatting issues when possible                                              |
-| lint                  | Validate ESLint and Prettier rules for the code base                                                              |
+| cy:ci                 | On Travis CI, it verifies Cypress installation, starts a server and runs `cy:run`                                 |
+| cy:open               | Runs Cypress Test Runner locally                                                                                  |
+| cy:run                | Runs End to End testing using Cypress headless Chrome on Travis CI                                                |
+| lint:fix              | Safely auto-fix ESLint and Prettier issues and warnings when possible                                             |
+| lint                  | Validate ESLint and Prettier rules for the codebase                                                               |
 | loki:ci               | Runs Visual Regression testing on CI                                                                              |
 | sloc                  | Count source lines of code                                                                                        |
-| start                 | Runs a live-reloading server . with HMR for development                                                           |
+| start                 | Runs a live-reloading server with Hot Module Reloading (HMR) for development                                      |
 | storybook:build:start | Runs built version of StoryBook on a local server for testing                                                     |
 | storybook:build       | Builds StoryBook locally                                                                                          |
 | storybook             | Runs StoryBook locally for development                                                                            |
@@ -144,6 +144,6 @@ List of all npm scripts in the project, use them appending `npm run` before each
 
 ## License
 
-frontend-boilerplate is open source software [licensed as MIT](./LICENSE).
+`frontend-boilerplate` is an open-source software [licensed as MIT](./LICENSE).
 
 Please consider supporting this project by adding a link to it.
