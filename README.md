@@ -1,6 +1,6 @@
 # frontend-boilerplate
 
-This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React with Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel, and Travis and contains state-of-art testing and development tools such Cypress, React Test Renderer, StoryBook, and Loki.
+This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in [React](https://reactjs.org/) with [Styled Components](https://styled-components.com/). It's built on modern tools such as [TypeScript](https://www.typescriptlang.org/), [Webpack](https://webpack.js.org/), [Babel](https://babeljs.io/), and [Travis](https://travis-ci.org/) and contains state-of-art testing and development tools such [Cypress](https://www.cypress.io/), [React Test Renderer](https://reactjs.org/docs/test-renderer.html), [StoryBook](https://storybook.js.org/), and [Loki](https://loki.js.org/).
 
 Kick-start your project with this boilerplate is super easy and will help you to stay productive.
 
@@ -9,7 +9,7 @@ Kick-start your project with this boilerplate is super easy and will help you to
 Your environment will have everything you need to build and test a modern single-page React application:
 
 - A live-reloading server (HMR) that warns about common mistakes
-- Language extras beyond ES6 like the object spread operator
+- Full support for TypeScript and language extras beyond ES6 like the object spread operator
 - A build script to bundle and optimize JS and CSS
 - Autoprefixed CSS, so you don’t need -webkit- or other prefixes plus a useful CSS normalizer
 - Proper linting with ESLint and Prettier
