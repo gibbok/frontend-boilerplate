@@ -74,7 +74,7 @@ code --install-extension dbaeumer.vscode-eslint
 
 Unit tests are done with Jest. TypeScript files in the `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
 
-Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
+Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding. Configure minimum threshold enforcement for coverage results by editing `coverageThreshold` object in `jest.config.js` file.
 
 Visual regression with Loki can be run using `npm run test:visual` (after StoryBook is running `npm run storybook`), when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
 
