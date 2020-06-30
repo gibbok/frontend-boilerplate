@@ -50,13 +50,15 @@ npm install
 
 4. Done! You can now start your development server by running `npm start`. This command will start a local server, located at `http://localhost:8080`.
 
-### Creating components
+### Creating UI components
 
 React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
 Styled Components is pre-installed by default and it has been set to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
 
 Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
+
+Validate your application code against TypeScript by using `npm run tsc` or in watch mode by `npm run tsc:watch`.
 
 ### Linting
 
