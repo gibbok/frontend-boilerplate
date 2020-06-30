@@ -62,7 +62,7 @@ Validate your application code against TypeScript by using `npm run tsc` or in w
 
 ### Linting
 
-The `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly format the code using ESLint and Prettier rules.
+Statically analyzes your code to quickly find problems, the `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safely fix issues and format the code using ESLint and Prettier rules.
 
 If you use Visual Studio Code IDE on file save, your source code will be automatically formatted if you have installed [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension. Type the following command in your terminal to install it:
 
