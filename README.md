@@ -97,7 +97,7 @@ https://gibbok.github.io/frontend-boilerplate/
 --------^^ your user ------ ^^ your repository
 ```
 
-If you want to deploy also StoryBook together with your application on GitHub Pages you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be situated in folder `/storybook`, for instance:
+If you want to deploy also StoryBook together with your application on GitHub Pages you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook stories will be situated in folder `/storybook`, for instance:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/project/
