@@ -12,13 +12,13 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
   testPathIgnorePatterns: [`.cache`, `dist`, `.+support.test.ts`, `cypress`],
   collectCoverage: true,
-  // collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.{stories.tsx}', '!**/*.d.ts'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts', '!src/**/*.stories.tsx'],
   coverageThreshold: {
     global: {
-      statements: 97,
-      branches: 95,
-      lines: 98,
-      functions: 94,
+      statements: 100,
+      branches: 100,
+      lines: 100,
+      functions: 100,
     },
   },
 };

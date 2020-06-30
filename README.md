@@ -2,7 +2,7 @@
 
 # frontend-boilerplate
 
-This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in [React](https://reactjs.org/) with [Styled Components](https://styled-components.com/). It's built on modern tools such as [TypeScript](https://www.typescriptlang.org/), [Webpack](https://webpack.js.org/), [Babel](https://babeljs.io/), and [Travis](https://travis-ci.org/) and contains state-of-art testing and development tools such [Cypress](https://www.cypress.io/), [React Test Renderer](https://reactjs.org/docs/test-renderer.html), [StoryBook](https://storybook.js.org/), and [Loki](https://loki.js.org/).
+This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in [React](https://reactjs.org/) with [Styled Components](https://styled-components.com/). It's built on modern tools such as [TypeScript](https://www.typescriptlang.org/), [Webpack](https://webpack.js.org/), [Babel](https://babeljs.io/), and [Travis](https://travis-ci.org/) and contains state-of-art testing and development tools such [Cypress](https://www.cypress.io/), [Jest](https://jestjs.io/), [React Test Renderer](https://reactjs.org/docs/test-renderer.html), [StoryBook](https://storybook.js.org/), and [Loki](https://loki.js.org/).
 
 Kick-start your project with this boilerplate is super easy and will help you to stay productive.
 
@@ -50,7 +50,7 @@ npm install
 
 4. Done! You can now start your development server by running `npm start`. This command will start a local server, located at `http://localhost:8080`.
 
-### Creating components
+### Creating UI components
 
 React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
@@ -58,9 +58,11 @@ Styled Components is pre-installed by default and it has been set to use `displa
 
 Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
 
+Validate your application code against TypeScript by using `npm run tsc` or in watch mode by `npm run tsc:watch`.
+
 ### Linting
 
-The `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly format the code using ESLint and Prettier rules.
+Statically analyzes your code to quickly find problems, the `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safely fix issues and format the code using ESLint and Prettier rules.
 
 If you use Visual Studio Code IDE on file save, your source code will be automatically formatted if you have installed [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension. Type the following command in your terminal to install it:
 
@@ -70,13 +72,13 @@ code --install-extension dbaeumer.vscode-eslint
 
 ### Testing
 
-Unit tests are done with Jest. TypeScipts files in the `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
+Unit tests are done with Jest. TypeScript files in the `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
 
-Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
+Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding. Configure minimum threshold enforcement for coverage results by editing `coverageThreshold` object in `jest.config.js` file.
 
 Visual regression with Loki can be run using `npm run test:visual` (after StoryBook is running `npm run storybook`), when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
 
-End to End testing using Cypress can be executed locally running `npm run cy:open`, this project also automatically perform headless E2E testing on CI using Travis.
+End to End testing using Cypress can be executed locally running `npm run cy:open`, this project also automatically perform headless E2E testing on CI using Travis when a pull request is created.
 
 Suggested extension, very useful when writing tests:  [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
 
@@ -95,7 +97,7 @@ https://gibbok.github.io/frontend-boilerplate/
 --------^^ your user ------ ^^ your repository
 ```
 
-If you want to deploy also StoryBook together with your application on GitHub Pages you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook will be situated in folder `/storybook`, for instance:
+If you want to deploy also StoryBook together with your application on GitHub Pages you can run `npm run build-deploy:all`, this script will place your app in a subfolder `/project` and StoryBook stories will be situated in folder `/storybook`, for instance:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/project/
