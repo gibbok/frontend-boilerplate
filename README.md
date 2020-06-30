@@ -1,6 +1,8 @@
+![frontend-boilerplate logo](frontend-boilerplate-logo.svg)
+
 # frontend-boilerplate
 
-This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in React with Styled Components. It's built on modern tools such as TypeScript, Webpack, Babel, and Travis and contains state-of-art testing and development tools such Cypress, React Test Renderer, StoryBook, and Loki.
+This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in [React](https://reactjs.org/) with [Styled Components](https://styled-components.com/). It's built on modern tools such as [TypeScript](https://www.typescriptlang.org/), [Webpack](https://webpack.js.org/), [Babel](https://babeljs.io/), and [Travis](https://travis-ci.org/) and contains state-of-art testing and development tools such [Cypress](https://www.cypress.io/), [React Test Renderer](https://reactjs.org/docs/test-renderer.html), [StoryBook](https://storybook.js.org/), and [Loki](https://loki.js.org/).
 
 Kick-start your project with this boilerplate is super easy and will help you to stay productive.
 
@@ -9,8 +11,8 @@ Kick-start your project with this boilerplate is super easy and will help you to
 Your environment will have everything you need to build and test a modern single-page React application:
 
 - A live-reloading server (HMR) that warns about common mistakes
-- Language extras beyond ES6 like the object spread operator
-- A build script to bundle JS, CSS, and optimize images and SVG for production, with hashes and sourcemaps
+- Full support for TypeScript and language extras beyond ES6 like the object spread operator
+- A build script to bundle and optimize JS and CSS
 - Autoprefixed CSS, so you don’t need -webkit- or other prefixes plus a useful CSS normalizer
 - Proper linting with ESLint and Prettier
 - A fast interactive unit test runner with built-in support for coverage reporting
@@ -52,15 +54,15 @@ npm install
 
 React Components, their tests, and StoryBook stories can be located anywhere in the `src` folder, please use `.tsx` for React with JSX and `.stories.tsx` for stories.
 
-Styled Components are pre-installed by default and it has been setted to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
+Styled Components is pre-installed by default and it has been set to use `displayName` as class name for better debugging. If you don't need this feature, you can disable it in file `.babelrc` with the `"displayName": false` option:
 
-Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standard.
+Also, your application will use a CSS normalizer, which makes browsers render all elements more consistently and in line with modern standards.
 
 ### Linting
 
-The `npm run lint` lint script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly formats the code.
+The `npm run lint` script supports `.ts, .tsx, .js, .json` files, use `npm run lint:fix` to automatically and safelly format the code using ESLint and Prettier rules.
 
-If you use Visual Studio Code IDE on file save, your source code will be automatically formatted, but you need to have installed [ESLInt](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension, using:
+If you use Visual Studio Code IDE on file save, your source code will be automatically formatted if you have installed [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension. Type the following command in your terminal to install it:
 
 ```shell
 code --install-extension dbaeumer.vscode-eslint
@@ -68,15 +70,15 @@ code --install-extension dbaeumer.vscode-eslint
 
 ### Testing
 
-Unit tests are done with Jest. TypeScipts files in the component `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
+Unit tests are done with Jest. TypeScipts files in the `src` folder ending with `.test.ts` or `.test.tsx` will be run through Jest. File for test support as `.support.test.ts` will be excluded from Jest test coverage.
 
 Run tests by executing `npm run test` or simply `npm t`, use `npm run test:watch` to continuously watch your tests when coding.
 
-Visual regression can be run using `npm run test:visual`, when you make changes and you want to save as reference use `test:visual:approve`.
+Visual regression with Loki can be run using `npm run test:visual` (after StoryBook is running `npm run storybook`), when you make changes and you want to save them as reference use `test:visual:approve`. Loki configurations can be found in `loki.config.js` file.
 
-End to End testing using Cypress can be executed locally running `npm run cy:open`, this project automatically perform headless E2E testing on CI using Travis.
+End to End testing using Cypress can be executed locally running `npm run cy:open`, this project also automatically perform headless E2E testing on CI using Travis.
 
-Suggested extension [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
+Suggested extension, very useful when writing tests:  [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner), simply install it by running:
 
 ```shell
 code --install-extension firsttris.vscode-jest-runner
@@ -84,9 +86,9 @@ code --install-extension firsttris.vscode-jest-runner
 
 #### Building
 
-Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. This folder can then be uploaded to your server.
+Running `npm run build` will compile and build your `src` folder and pipe it to the `build` folder. The `build` folder will contain two subfolders, `project` for your application and `storybook` for your stories. Both folders can then be uploaded to your server.
 
-Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visibleon GitHub, for example at:
+Running `npm run build-deploy` will compile and build your code and publish on GitHub Pages automatically, your application will be visible on GitHub, for example at:
 
 ```shell
 https://gibbok.github.io/frontend-boilerplate/
@@ -104,10 +106,46 @@ https://gibbok.github.io/frontend-boilerplate/storybook/
 
 You can use `npm run clean` to wipe out the cache and start from a fresh slate.
 
-You can see how many source lines of code your project includes by using `npm run sloc`.
+To see how many source lines of code your project includes by using `npm run sloc`.
 
 You can clean up your project by checking unused npm packages with `npm run dep`.
 
+#### Npm package script details
+
+List of all npm scripts in the project, use them appending `npm run` before each command.
+
+|                       |                                                                                                                   |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------|
+| build-deploy          | Executes `npm run check`, builds for production and deploys `build` folder to GitHub Pages                        |
+| build-deploy:all      | As `build-deploy` but it deploys your application and StoryBook to respectively `project` and `storybook` folders |
+| build:start           | Runs on a test server the content of the `build` folder                                                           |
+| build                 | Build the project                                                                                                 |
+| check                 | Validate source code using TypeScript, ESLint, and Jest                                                           |
+| clean                 | Wipe out the cache and start from a fresh slate                                                                   |
+| cy:verify             | Verify that Cypress is installed correctly and is executable                                                      |
+| dep                   | Identify not used dependencies                                                                                    |
+| deploy                | Deploy `project` folder to GitHub Pages                                                                           |
+| deploy:all            | As `deploy` but also publish `storybook` folder                                                                   |
+| cy:ci                 | On Travis CI, it verifies Cypress installation, starts a server and runs `cy:run`                                 |
+| cy:open               | Runs Cypress Test Runner locally                                                                                  |
+| cy:run                | Runs End to End testing using Cypress headless Chrome on Travis CI                                                |
+| lint:fix              | Safely auto-fix ESLint and Prettier issues and warnings when possible                                             |
+| lint                  | Validate ESLint and Prettier rules for the codebase                                                               |
+| loki:ci               | Runs Visual Regression testing on CI                                                                              |
+| sloc                  | Count source lines of code                                                                                        |
+| start                 | Runs a live-reloading server with Hot Module Reloading (HMR) for development                                      |
+| storybook:build:start | Runs built version of StoryBook on a local server for testing                                                     |
+| storybook:build       | Builds StoryBook locally                                                                                          |
+| storybook             | Runs StoryBook locally for development                                                                            |
+| test:visual:approve   | Save visual changes ad reference for Visual Regression                                                            |
+| test:visual           | Runs Visual Regression testing, StoryBook must be running to work                                                 |
+| test:watch            | Runs Jest tests in watch mode                                                                                     |
+| test                  | Runs Jest tests once                                                                                              |
+| tsc:watch             | Runs TypeScript validation in watch mode                                                                          |
+| tsc                   | Runs TypeScript validation                                                                                        |
+
 ## License
 
-frontend-boilerplate is open source software [licensed as MIT](./LICENSE).
+`frontend-boilerplate` is an open-source software [licensed as MIT](./LICENSE).
+
+Please consider supporting this project by adding a link to it.
