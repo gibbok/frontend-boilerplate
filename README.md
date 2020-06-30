@@ -1,3 +1,5 @@
+![frontend-boilerplate logo](frontend-boilerplate-logo.svg)
+
 # frontend-boilerplate
 
 This project is an opinionated boilerplate which helps you build fast, robust, and adaptable single-page application (SPA) in [React](https://reactjs.org/) with [Styled Components](https://styled-components.com/). It's built on modern tools such as [TypeScript](https://www.typescriptlang.org/), [Webpack](https://webpack.js.org/), [Babel](https://babeljs.io/), and [Travis](https://travis-ci.org/) and contains state-of-art testing and development tools such [Cypress](https://www.cypress.io/), [React Test Renderer](https://reactjs.org/docs/test-renderer.html), [StoryBook](https://storybook.js.org/), and [Loki](https://loki.js.org/).
