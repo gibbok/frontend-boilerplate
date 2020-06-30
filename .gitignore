@@ -1,6 +1,7 @@
 # Project specifics
 build
-cypress/screenshoots
+cypress/screenshots
+cypress/videos
 
 # Logs
 logs
