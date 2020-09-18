@@ -4,4 +4,4 @@ export const mkRandomString = (): string =>
     .replace(/[^a-z]+/g, '')
     .substr(0, 5);
 
-export const mkRandomEmail = (): string => `${mkRandomString()}@actyx.io`;
+export const mkRandomEmail = (): string => `test_${mkRandomString()}@actyx.io`;
