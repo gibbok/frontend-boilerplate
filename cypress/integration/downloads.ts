@@ -11,7 +11,7 @@ const FOLDER = {
 };
 
 describe('downloads.actyx.com', () => {
-  it('should check if artifact file names and extenions are valid', () => {
+  it('should check if artifact file names and extensions are valid', () => {
     cy.visit(URL_START);
     cy.get('a').then((x) => {
       const hrefs = x

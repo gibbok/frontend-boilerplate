@@ -10,4 +10,4 @@ cache:
 install:
   - npm ci
 script:
-  - npm run tsc 
+  - npm run check
