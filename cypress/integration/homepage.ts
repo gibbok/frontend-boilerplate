@@ -1,6 +1,7 @@
 import { mkRandomEmail } from '../utils';
 
-const URL_HOME = 'https://www.actyx.com/';
+const URL_HOME_EN = 'https://www.actyx.com/';
+const URL_HOME_DE = 'https://www.actyx.com/de/';
 const MSG_PRIVACY_EN =
   'This website stores cookies on your computer to provide more personalized services to you.';
 
@@ -8,7 +9,7 @@ const MSG_PRIVACY_DE = 'Diese Website speichert Cookies auf Ihrem Computer.';
 
 describe('www.actyx.com/', () => {
   beforeEach(() => {
-    cy.visit(URL_HOME);
+    cy.visit(URL_HOME_EN);
   });
 
   it('should switch language after user clicks option', () => {
@@ -39,19 +40,29 @@ describe('www.actyx.com/', () => {
     cy.contains('Thank you! Your request was successfully submitted.');
   });
 
-  describe.only('cookies warning', () => {
+  it('should display imprint with valid link en', () => {
+    cy.visit(URL_HOME_EN);
+    cy.contains('Imprint').should('exist').should('have.attr', 'href', '/imprint');
+  });
+
+  it('should display imprint with valid link de', () => {
+    cy.visit(URL_HOME_DE);
+    cy.contains('Impressum').should('exist').should('have.attr', 'href', '/de/imprint');
+  });
+
+  describe('cookies warning', () => {
     it('should show cookies warning in en', () => {
-      cy.visit(`${URL_HOME}`);
+      cy.visit(URL_HOME_EN);
       cy.contains(MSG_PRIVACY_EN).should('exist');
     });
 
     it('should show cookies warning in de', () => {
-      cy.visit(`${URL_HOME}/de/`);
+      cy.visit(URL_HOME_DE);
       cy.contains(MSG_PRIVACY_DE).should('exist');
     });
 
     it('should close warning when user accepts cookies', () => {
-      cy.visit(`${URL_HOME}`);
+      cy.visit(URL_HOME_EN);
       const buttonAccept = cy.get('#hs-eu-confirmation-button').should('exist');
       buttonAccept.click();
       cy.contains(MSG_PRIVACY_EN).should('be.hidden');
