@@ -1,26 +1,28 @@
 import { mkRandomEmail, mkRandomString } from '../utils';
 
-const URL_G_START = 'https://www.actyx.com/get-started/';
-const URL_G_END_THANKS = 'https://www.actyx.com/thank-you';
-const URL_G_END_DEVELOPER = 'https://developer.actyx.com/docs/home/welcome';
-
-const TEST_EMAIL = mkRandomEmail();
-const TEST_DETAILS = `test - ${mkRandomString()} - I am a robot adding details`;
-
-const checkThankYou = () => {
-  // assert submit was successful
-  cy.contains('Thank you!').should('exist');
-  cy.location().should((loc) => {
-    expect(loc.href).to.eq(URL_G_END_THANKS);
-  });
-};
-
-const submitForm = () => {
-  const btnSumbit = cy.get('button[type="submit"]').should('exist');
-  btnSumbit.click();
-};
-
 describe('actyx.com/get-started/', () => {
+  const URL_G_START = 'https://www.actyx.com/get-started/';
+  const URL_G_END_THANKS = 'https://www.actyx.com/thank-you'; // TODO read above
+  const URL_G_END_DEVELOPER = 'https://developer.actyx.com/docs/home/welcome';
+
+  const TEST_EMAIL = mkRandomEmail();
+  const TEST_DETAILS = `test - ${mkRandomString()} - I am a robot adding details`;
+
+  const checkThankYou = () => {
+    // assert submit was successful
+    cy.contains('Thank you!').should('exist');
+    cy.location().should((loc) => {
+      expect(loc.href).to.eq(URL_G_END_THANKS);
+    });
+  };
+
+  const submitForm = () => {
+    cy.get('button[type="submit"]').should('exist');
+    // TODO uncomment after #5296 is completed
+    // const btnSumbit = cy.get('button[type="submit"]').should('exist');
+    // btnSumbit.click();
+  };
+
   it('should schedule a call for a factory manager', () => {
     cy.visit(URL_G_START);
 

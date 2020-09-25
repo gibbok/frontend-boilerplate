@@ -1,13 +1,12 @@
 import { mkRandomEmail } from '../utils';
 
-const URL_HOME_EN = 'https://www.actyx.com/';
-const URL_HOME_DE = 'https://www.actyx.com/de/';
-const MSG_PRIVACY_EN =
-  'This website stores cookies on your computer to provide more personalized services to you.';
-
-const MSG_PRIVACY_DE = 'Diese Website speichert Cookies auf Ihrem Computer.';
-
 describe('www.actyx.com/', () => {
+  const URL_HOME_EN = 'https://www.actyx.com/';
+  const URL_HOME_DE = 'https://www.actyx.com/de/';
+  const MSG_PRIVACY_EN =
+    'This website stores cookies on your computer to provide more personalized services to you.';
+  const MSG_PRIVACY_DE = 'Diese Website speichert Cookies auf Ihrem Computer.';
+
   beforeEach(() => {
     cy.visit(URL_HOME_EN);
   });
