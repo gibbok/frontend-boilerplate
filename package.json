@@ -23,7 +23,12 @@
     "links:check:prod:main": "ts-node ./src/check-links.ts prod main",
     "links:check:prod:download": "ts-node ./src/check-links.ts prod download",
     "links:check:prod": "npm run links:check:prod:developer && npm run links:check:prod:main && npm run links:check:prod:download",
-    "evaluate": "npm run cy:run && npm run links:check:prod"
+    "links:check:dev:developer": "ts-node ./src/check-links.ts dev developer",
+    "links:check:dev:main": "ts-node ./src/check-links.ts dev main",
+    "links:check:dev:download": "ts-node ./src/check-links.ts dev download",
+    "links:check:dev": "npm run links:check:dev:developer && npm run links:check:dev:main && npm run links:check:dev:download",
+    "evaluate": "npm run cy:run && npm run links:check:prod",
+    "evaluate:dev": "npm run cy:run && npm run links:check:dev"
   },
   "dependencies": {
     "typescript": "^3.9.5"
