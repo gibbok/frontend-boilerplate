@@ -8,9 +8,9 @@
     "openMode": 3
   },
   "env": {
-    "URL_DEVELOPER": "https://developer.actyx.com",
-    "URL_MAIN": "https://www.actyx.com",
-    "URL_DOWNLOAD": "https://downloads.actyx.com",
-    "URL_STORAGE": "https://axartifacts.blob.core.windows.net/artifacts/"
+    "AX_WEB_E2E_DOWNLOAD": "https://downloads.actyx.com",
+    "AX_WEB_E2E_DEVELOPER": "https://developer.actyx.com",
+    "AX_WEB_E2E_MAIN": "https://www.actyx.com",
+    "AX_WEB_E2E_STORAGE": "https://axartifacts.blob.core.windows.net/artifacts/"
   }
 }

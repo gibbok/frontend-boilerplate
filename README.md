@@ -13,6 +13,8 @@ You can use this tool for the production site or for locally on your branch.
 | npm run links:check:prod:developer | Check for broken links across <https://developer.actyx.com> |
 | npm run links:check:prod:main      | Check for broken links across <https://www.actyx.com>       |
 | npm run links:check:prod:download  | Check for broken links across <https://download.actyx.com>  |
+| npm run cy:open                    | Run Cypress using production urls                           |
+| npm run cy:run                     | Run Cypress headless chrome using production urls           |
 
 ## For development usage
 
@@ -27,6 +29,15 @@ You need to have a local server installed, please use: `npm install --global htt
 | npm run links:check:dev:developer | Check for broken links across developer.actyx.com locally |
 | npm run links:check:dev:main      | Check for broken links across www.actyx.com locally       |
 | npm run links:check:dev:download  | Check for broken links across download.actyx.com locally  |
+| npm run cy:open                   | Run Cypress as production urls (value can be overwritten) |
+| npm run cy:run                    | Run Cypress headless chrome using production urls         |
+
+It is possible to set custom urls for Cypress by using:
+
+export CYPRESS_AX_WEB_E2E_DOWNLOAD=http://localhost:8081
+export CYPRESS_AX_WEB_E2E_MAIN=http://localhost:9000
+export CYPRESS_AX_WEB_E2E_DEVELOPER=http://localhost:8082
+export CYPRESS_AX_WEB_E2E_STORAGE=https://axartifacts.blob.core.windows.net/artifacts/
 
 | Script               | Local URL for project |
 |----------------------|-----------------------|
