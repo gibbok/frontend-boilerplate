@@ -11,7 +11,7 @@ The following scripts will run tests against live productions sites:
 
 | Script                             | Description                                                 |
 |------------------------------------|-------------------------------------------------------------|
-| npm run evaluate                   | Run end to end testing and link checker                     |
+| npm run test                       | Run links checker and end to end testing                    |
 | npm run links:check:prod           | Check for broken links across all Actyx websites            |
 | npm run links:check:prod:developer | Check for broken links across <https://developer.actyx.com> |
 | npm run links:check:prod:main      | Check for broken links across <https://www.actyx.com>       |
@@ -25,7 +25,7 @@ You need to have a local server installed, please use: `npm install --global htt
 
 | Script                            |
 |-----------------------------------|
-| npm run evaluate:dev              |
+| npm run test:dev                  |
 | npm run links:check:dev           |
 | npm run links:check:dev:developer |
 | npm run links:check:dev:main      |

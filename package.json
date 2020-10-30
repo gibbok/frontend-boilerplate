@@ -22,8 +22,8 @@
     "links:check:dev:main": "ts-node ./src/check-links.ts dev main",
     "links:check:dev:download": "ts-node ./src/check-links.ts dev download",
     "links:check:dev": "npm run links:check:dev:developer && npm run links:check:dev:main && npm run links:check:dev:download",
-    "evaluate": "npm run cy:run && npm run links:check:prod",
-    "evaluate:dev": "npm run cy:run && npm run links:check:dev"
+    "test": "npm run cy:run && npm run links:check:prod",
+    "test:dev": "npm run cy:run && npm run links:check:dev"
   },
   "dependencies": {
     "typescript": "^4.0.5"
