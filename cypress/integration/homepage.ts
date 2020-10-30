@@ -12,27 +12,22 @@ describe('www.actyx.com/', () => {
   });
 
   it('should switch language after user clicks option', () => {
-    // check if en appears as default
     cy.contains('English').should('exist');
     cy.contains('The Factory Digitization Platform').should('exist');
 
-    // change to de
     cy.get('a[href="/de/*"]').first().click({ force: true });
     cy.contains('Deutsch').should('exist');
     cy.contains('Die Plattform zur Digitalisierung der Fabrik').should('exist');
   });
 
   it('should sign-up to newsletter', () => {
-    // check if text is on page
     const email = mkRandomEmail();
     cy.contains('Sign-up to our newsletter').should('exist');
 
-    // get input and enter an email
     const input = cy.get('input[type="email"]');
     input.should('exist');
     input.type(email);
 
-    // click submit button and assert subscription
     const submit = cy.get('button[type="submit"]');
     submit.should('exist');
     submit.click();
@@ -41,12 +36,16 @@ describe('www.actyx.com/', () => {
 
   it('should display imprint with valid link en', () => {
     cy.visit(URL_HOME_EN);
-    cy.contains('Imprint').should('exist').should('have.attr', 'href', '/imprint');
+    cy.contains('Imprint')
+      .should('exist')
+      .should('have.attr', 'href', '/imprint');
   });
 
   it('should display imprint with valid link de', () => {
     cy.visit(URL_HOME_DE);
-    cy.contains('Impressum').should('exist').should('have.attr', 'href', '/de/imprint');
+    cy.contains('Impressum')
+      .should('exist')
+      .should('have.attr', 'href', '/de/imprint');
   });
 
   describe('cookies warning', () => {

@@ -7,9 +7,11 @@ describe('actyx.com/get-started/', () => {
   const TEST_EMAIL = mkRandomEmail();
   const TEST_DETAILS = `test - ${mkRandomString()} - I am a robot adding details`;
 
-  it('should schedule a call for a factory manager', () => {
+  beforeEach(() => {
     cy.visit(URL_GETSTARTED);
+  });
 
+  it('should schedule a call for a factory manager', () => {
     const btnScheduleCall = cy.contains('Schedule a call');
     btnScheduleCall.should('exist');
 
@@ -26,8 +28,6 @@ describe('actyx.com/get-started/', () => {
   });
 
   it('should schedule a demo for an it project manager', () => {
-    cy.visit(URL_GETSTARTED);
-
     const btnGetDemo = cy.contains('Get a demo');
     btnGetDemo.should('exist');
 
@@ -43,9 +43,7 @@ describe('actyx.com/get-started/', () => {
     inputDetails.type(TEST_DETAILS);
   });
 
-  it.only('should redirect a developer to developer site', () => {
-    cy.visit(URL_GETSTARTED);
-
+  it('should redirect a developer to developer site', () => {
     const btnGetStart = cy.get('button').contains('Get started');
     btnGetStart.should('exist');
 
