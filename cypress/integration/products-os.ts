@@ -1,7 +1,7 @@
-import { URL_DEVELOPER } from '../urls';
+import { URL_DEVELOPER, URL_MAIN } from '../urls';
 
 describe('www.actyx.com/products/os/', () => {
-  const URL_START = `${URL_DEVELOPER}/products/os/`;
+  const URL_START = `${URL_MAIN}/products/os/`;
   const URL_DOCS_OS = `${URL_DEVELOPER}/docs/os/getting-started/installation/`;
 
   beforeEach(() => cy.visit(URL_START));
