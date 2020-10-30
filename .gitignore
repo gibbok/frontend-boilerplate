@@ -1,3 +1,6 @@
+# Checker specifics
+report-links
+
 # Project specifics
 build
 cypress/screenshots
