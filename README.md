@@ -42,7 +42,7 @@ Run the following scripts to run end to end testing using Cypress:
 
 ## ENV variables
 
-By default the links checker and end to end testing are pointing to productions sites, you can use alternative URLs by setting the following env variables in your terminal:
+By default the links checker and the end to end testing are pointing to productions sites, you can use alternative URLs by setting the following env variables in your terminal:
 
 Env variable for links checker and their defaults:
 
