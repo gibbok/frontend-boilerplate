@@ -1,6 +1,7 @@
 describe('www.actyx.com/products/os/', () => {
   const URL_START = 'https://www.actyx.com/products/os/';
-  const URL_DOCS_OS = 'https://developer.actyx.com/docs/os/getting-started/installation/';
+  const URL_DOCS_OS =
+    'https://developer.actyx.com/docs/os/getting-started/installation/';
 
   beforeEach(() => cy.visit(URL_START));
 
@@ -11,7 +12,7 @@ describe('www.actyx.com/products/os/', () => {
     cy.url().should('eq', URL_DOCS_OS);
   });
 
-  it('should open youtube into video when user click cta', () => {
+  it('should have a button to open the video', () => {
     const btnVideo = cy.contains('Actyx in 10 Minutes');
     btnVideo.should('exist');
   });

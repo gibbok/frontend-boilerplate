@@ -48,6 +48,6 @@ describe('actyx.com/get-started/', () => {
     btnGetStart.should('exist');
 
     btnGetStart.click();
-    cy.url().should('equal', URL_DEVELOPER);
+    cy.url().should('eq', URL_DEVELOPER);
   });
 });
