@@ -20,7 +20,7 @@ The following scripts will run tests against live productions sites:
 ## For development usage
 
 Perform the same tests as above but locally, useful when developing new features.
-To run end to end testing, you need to build each website locally and set some global variables.
+To run end to end testing, you need to build each website locally and set some global variables (more info below).
 You need to have a local server installed, please use: `npm install --global http-server`.
 
 | Script                            |
@@ -42,11 +42,9 @@ Run the following scripts to run end to end testing using Cypress:
 
 ## ENV variables
 
-By default the links checker and end to end testing are pointing to productions sites, you can set alternative  URLS by setting the following env variables in your terminal.
+By default the links checker and end to end testing are pointing to productions sites, you can use alternative URLs by setting the following env variables in your terminal:
 
-Defaults:
-
- Env variable for links checker and their defaults:
+Env variable for links checker and their defaults:
 
 |                      |                               |
 |----------------------|-------------------------------|
@@ -63,7 +61,7 @@ Env variable Cypress and their defaults:
 | CYPRESS_AX_WEB_E2E_DEVELOPER | <https://developer.actyx.com>                         |
 | CYPRESS_AX_WEB_E2E_STORAGE   | <https://axartifacts.blob.core.windows.net/artifacts> |
 
-Example of configurations for local development:"
+Example of configurations for local development:
 
 ```shell
 export AX_WEB_E2E_DOWNLOAD=http://localhost:8081
