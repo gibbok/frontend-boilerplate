@@ -1,8 +1,10 @@
+import { URL_MAIN } from '../urls';
 import { mkRandomEmail } from '../utils';
 
 describe('www.actyx.com/', () => {
-  const URL_HOME_EN = 'https://www.actyx.com/';
-  const URL_HOME_DE = 'https://www.actyx.com/de/';
+  const URL_HOME_EN = URL_MAIN;
+  const URL_HOME_DE = `${URL_MAIN}/de/`;
+
   const MSG_PRIVACY_EN =
     'This website stores cookies on your computer to provide more personalized services to you.';
   const MSG_PRIVACY_DE = 'Diese Website speichert Cookies auf Ihrem Computer.';

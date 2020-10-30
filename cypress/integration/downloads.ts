@@ -1,18 +1,16 @@
-const URL_START = 'https://downloads.actyx.com/';
-const URL_STORAGE = 'https://axartifacts.blob.core.windows.net/artifacts/';
-
-const FOLDER = {
-  android: '/android/',
-  win64: '/win64/',
-  mac: '/mac/',
-  x64: '/x64/',
-  aarch64: '/aarch64/',
-  arm: '/arm/',
-};
+import { URL_DEVELOPER, URL_STORAGE } from '../urls';
 
 describe('downloads.actyx.com', () => {
+  const FOLDER = {
+    android: '/android/',
+    win64: '/win64/',
+    mac: '/mac/',
+    x64: '/x64/',
+    aarch64: '/aarch64/',
+    arm: '/arm/',
+  };
   it('should check if artifact file names and extensions are valid', () => {
-    cy.visit(URL_START);
+    cy.visit(URL_DEVELOPER);
     cy.get('a').then((x) => {
       const hrefs = x
         .toArray()

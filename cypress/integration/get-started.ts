@@ -1,8 +1,9 @@
+import { URL_DEVELOPER, URL_MAIN } from '../urls';
 import { mkRandomEmail, mkRandomString } from '../utils';
 
 describe('actyx.com/get-started/', () => {
-  const URL_GETSTARTED = 'https://www.actyx.com/get-started/';
-  const URL_DEVELOPER = 'https://developer.actyx.com/docs/home/home';
+  const URL_GETSTARTED = `${URL_MAIN}/get-started/`;
+  const URL_DEV = `${URL_DEVELOPER}/docs/home/home`;
 
   const TEST_EMAIL = mkRandomEmail();
   const TEST_DETAILS = `test - ${mkRandomString()} - I am a robot adding details`;
@@ -48,6 +49,6 @@ describe('actyx.com/get-started/', () => {
     btnGetStart.should('exist');
 
     btnGetStart.click();
-    cy.url().should('eq', URL_DEVELOPER);
+    cy.url().should('eq', URL_DEV);
   });
 });

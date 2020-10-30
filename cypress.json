@@ -6,5 +6,11 @@
   "retries": {
     "runMode": 3,
     "openMode": 3
+  },
+  "env": {
+    "URL_DEVELOPER": "https://developer.actyx.com",
+    "URL_MAIN": "https://www.actyx.com",
+    "URL_DOWNLOAD": "https://downloads.actyx.com",
+    "URL_STORAGE": "https://axartifacts.blob.core.windows.net/artifacts/"
   }
 }
