@@ -30,8 +30,6 @@ describe('www.actyx.com/', () => {
 
     const submit = cy.get('button[type="submit"]');
     submit.should('exist');
-    submit.click();
-    cy.contains('Thank you! Your request was successfully submitted.');
   });
 
   it('should display imprint with valid link en', () => {
