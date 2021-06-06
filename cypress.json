@@ -1,4 +1,16 @@
 {
-  "baseUrl": "http://localhost:8080",
-  "video": false
+  "video": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6; Cypress) AppleWebKit/537.36 (KHTML, like Gecko, Cypress) Chrome/85.0.4183.102 Safari/537.36",
+  "retries": {
+    "runMode": 3,
+    "openMode": 3
+  },
+  "env": {
+    "AX_WEB_E2E_DOWNLOAD": "https://downloads.actyx.com",
+    "AX_WEB_E2E_DEVELOPER": "https://developer.actyx.com",
+    "AX_WEB_E2E_MAIN": "https://www.actyx.com",
+    "AX_WEB_E2E_STORAGE": "https://axartifacts.blob.core.windows.net/artifacts/"
+  }
 }
